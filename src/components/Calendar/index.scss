@@ -1,0 +1,63 @@
+@function r($px) {
+  @return $px / 30 * 1rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  color: #333;
+}
+
+ul > li {
+  width: 14.28%;
+  text-align: center;
+}
+
+.dateWrap li {
+  font-size: r(28);
+  line-height: r(80);
+  font-family: "微软雅黑";
+}
+
+.dateWrap .disable {
+  color: #999;
+}
+
+.dateWrap .nowDay {
+  color: #f80;
+}
+
+.weekWrap {
+  font-size: r(28);
+  line-height: r(70);
+  font-family: "微软雅黑";
+  position: relative;
+}
+
+.weekWrap::before {
+  content: " ";
+  position: absolute;
+  bottom: r(-10);
+  left: 0;
+  width: 100%;
+  height: r(10);
+  background: linear-gradient(to bottom, #ececec, rgba(255, 255, 255, 0));
+}
+
+.calendarTitle {
+  display: flex;
+  padding: 0 r(25);
+}
+
+.calendarTitle i {
+  width: r(50);
+}
+
+.calendarTitle strong {
+  font-weight: normal;
+  flex: 1;
+  text-align: center;
+}
